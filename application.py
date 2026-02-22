@@ -37,7 +37,7 @@ def predict_datapoint():
 
         return render_template("index.html", results=result[0])
 
-        return render_template("home.html", results=result[0])
+        # return render_template("home.html", results=result[0])
 
 
     return render_template("home.html")
