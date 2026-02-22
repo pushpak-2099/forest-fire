@@ -16,11 +16,11 @@ def index():
 def predict_datapoint():
     if request.method == "POST":
         Temperature = float(request.form.get("Temperature"))
-<<<<<<< HEAD
+
         RH = float(request.form.get("RH"))  
-=======
+
         RH = float(request.form.get("RH"))
->>>>>>> 4dbc95ae193ecaa33bf16567f987836adeae2ff8
+
         Ws = float(request.form.get("Ws"))
         Rain = float(request.form.get("Rain"))
         FFMC = float(request.form.get("FFMC"))
@@ -33,11 +33,11 @@ def predict_datapoint():
         scaled_data = scaler_model.transform(input_data)
         result = ridge_model.predict(scaled_data)
 
-<<<<<<< HEAD
+
         return render_template("index.html", results=result[0])
-=======
+
         return render_template("home.html", results=result[0])
->>>>>>> 4dbc95ae193ecaa33bf16567f987836adeae2ff8
+
 
     return render_template("home.html")
 
