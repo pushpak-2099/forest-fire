@@ -29,7 +29,7 @@ def predict_datapoint():
         scaled_data = scaler_model.transform(input_data)
         result = ridge_model.predict(scaled_data)
 
-        return render_template("home.html", results=result[0])
+        return render_template("index.html", results=result[0])
 
     return render_template("home.html")
 
